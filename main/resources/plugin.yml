@@ -1,0 +1,9 @@
+name: Main
+version: @version@
+main: me.serophots.epictitles.Main
+commands:
+  broadcast:
+    aliases:
+      - "bc"
+      - "alert"
+  actionbar:

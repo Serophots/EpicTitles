@@ -1,0 +1,17 @@
+defaultTitlePrefix: '&8[&aAnnouncement&8]' #When a player dosnt specify the title, this will take its place
+prefix: '&8[&c&lTest&7MC&8]' #{prefix} will be replaced with this
+noPerm: '{prefix} &cYou dont have permission to run this command!'
+incorrectArgs: '{prefix} &cIncorrect command usage! Please check the correct way to use the command!'
+
+joinEvent:
+  types: #Valid options to put here are CHATLOCAL, CHATPUBLIC, TITLE and ACTIONBAR. CHATLOCAL will send the message in chat to the player only, while CHATPUBLIC will send it to everyone
+    - "chatlocal"
+    - "title"
+
+  chatLocalMessage: '{prefix} &bWelcome to the server!' #Leave blank if it is not in the types list
+  chatPublicMessage: '{prefix} &bWelcome to the server!' #Leave blank if it is not in the types list
+  titleMessage: '&8[&bWelcome&8]|&aWelcome to our server!' #Your title and subtitle are split using the '|' symbol, the left side is the title, the right is the subtitle. You can replace the left side with {defaultprefix} to get the default one
+  actionbarMessage: '' #Leave blank if it is not in the types list
+commands:
+  broadcastPerm: 'et.broadcast' #Permission for /broadcast
+  actionbarPerm: 'et.actionbar' #Permission for /actionbar
