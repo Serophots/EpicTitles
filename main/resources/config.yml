@@ -4,14 +4,28 @@ noPerm: '{prefix} &cYou dont have permission to run this command!'
 incorrectArgs: '{prefix} &cIncorrect command usage! Please check the correct way to use the command!'
 
 joinEvent:
+  enabled: true
   types: #Valid options to put here are CHATLOCAL, CHATPUBLIC, TITLE and ACTIONBAR. CHATLOCAL will send the message in chat to the player only, while CHATPUBLIC will send it to everyone
     - "chatlocal"
     - "title"
-
   chatLocalMessage: '{prefix} &bWelcome to the server!' #Leave blank if it is not in the types list
   chatPublicMessage: '{prefix} &bWelcome to the server!' #Leave blank if it is not in the types list
   titleMessage: '&8[&bWelcome&8]|&aWelcome to our server!' #Your title and subtitle are split using the '|' symbol, the left side is the title, the right is the subtitle. You can replace the left side with {defaultprefix} to get the default one
   actionbarMessage: '' #Leave blank if it is not in the types list
+  override: true #Wether or not it should override any current messages
+playerDeathEvent:
+  enabled: true
+  types:
+    - "chatpublic"
+    - "chatlocal"
+    - "title"
+    - "actionbar"
+  chatLocalMessage: 'local test'
+  chatPublicMessage: '{prefix} &4{player}&c has died from {cause}!'
+  titleMessage: 'title|test'
+  actionbarMessage: 'actionbar test'
+  override: true
+
 commands:
   broadcastPerm: 'et.broadcast' #Permission for /broadcast
   actionbarPerm: 'et.actionbar' #Permission for /actionbar

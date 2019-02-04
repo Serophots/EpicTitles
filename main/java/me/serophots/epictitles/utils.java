@@ -3,6 +3,7 @@ package me.serophots.epictitles;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.entity.EntityDamageEvent;
 
 import java.lang.reflect.Constructor;
 import java.util.List;
@@ -106,6 +107,36 @@ public class utils {
             }
         }catch(Exception e){
             e.printStackTrace();
+        }
+    }
+
+    public static String DamageCause(EntityDamageEvent.DamageCause d){
+        if(d == EntityDamageEvent.DamageCause.VOID){
+            return "falling in the void";
+        }else if(d == EntityDamageEvent.DamageCause.BLOCK_EXPLOSION){
+            return "an explosion";
+        }else if(d == EntityDamageEvent.DamageCause.CONTACT){
+            return "cactus";
+        }else if(d == EntityDamageEvent.DamageCause.DROWNING){
+            return "drowning";
+        }else if(d == EntityDamageEvent.DamageCause.ENTITY_ATTACK){
+            return "a mob attack";
+        }else if(d == EntityDamageEvent.DamageCause.ENTITY_EXPLOSION){
+            return "a creeper";
+        }else if(d == EntityDamageEvent.DamageCause.FALL){
+            return "fall damage";
+        }else if(d == EntityDamageEvent.DamageCause.FIRE){
+            return "fire";
+        }else if(d == EntityDamageEvent.DamageCause.FIRE_TICK){
+            return "fire";
+        }else if(d == EntityDamageEvent.DamageCause.LAVA){
+            return "fire";
+        }else if(d == EntityDamageEvent.DamageCause.STARVATION){
+            return "starvation";
+        }else if(d == EntityDamageEvent.DamageCause.SUFFOCATION){
+            return "suffocation";
+        }else{
+            return "death";
         }
     }
 }
